@@ -1,0 +1,58 @@
+<div id="scroll-top">
+    <div class="container mb-3 mt-2">
+        <style>
+            nav svg {
+                height: 20px;
+            }
+
+            svg {
+                overflow: hidden;
+                vertical-align: middle;
+            }
+        </style>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header bg-primary text-light">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h4 class="pull-start">Edit Services</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        @if (Session::has('message'))
+                           <div class="alert alert-success" role="alert">{{Session::get('message')}}</div>
+                        @endif
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Image</th>
+                                    <th>Name</th>
+                                    <th style="width: 30px !important;">Content</th>
+                                    <th>Edit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($services as $service)
+                                    <tr>
+                                        <td>
+                                            <img src="{{asset('assets/images/Service_Images')}}/{{$service->service_image}}" alt="Services" width="60"></td>
+                                        </td>
+                                        <td class="w-30">{{$service->service_name}}</td>
+                                        <td class="w-50">{{$service->service_content}}</td>
+                                        <td>
+                                            <a href="{{route('admin.editservices',['service_id'=>$service->id])}}"><i class="fa fa-edit fa-2x"></i></a>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                        {{$services->links()}}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
