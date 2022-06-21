@@ -30,7 +30,7 @@ class AdminEditServices extends Component
         $service->service_content = $this->service_content;
         if($this->newserviceimage){
             $imagename = Carbon::now()->timestamp.'.'. $this->newserviceimage->extension();
-            $this->newserviceimage->storeAs('services',$imagename);
+            $this->newserviceimage->storeAs('Service_Images',$imagename);
             $service->service_image = $imagename;
         }
        $service->save();

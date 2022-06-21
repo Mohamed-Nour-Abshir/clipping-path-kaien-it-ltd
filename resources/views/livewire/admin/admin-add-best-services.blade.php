@@ -25,14 +25,14 @@
                                     <div class="form-group">
                                         <label class="col-md-6 control-label">Name</label>
                                         <div class="col-md-6 mb-3">
-                                            <input type="text" class="form-control input-md" placeholder="Name of the Course" wire:model="name">
+                                            <input type="text" class="form-control input-md" placeholder="Name of the Service" wire:model="name">
                                             @error('name')<span class="text-danger">{{$message}}</span> @enderror
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-md-6 control-label">Description</label>
+                                        <label class="col-md-6 control-label">Price </label>
                                         <div class="col-md-6 mb-3">
-                                            <input type="text" class="form-control input-md" placeholder="Description of the Course" wire:model="description">
+                                            <input type="text" class="form-control input-md" placeholder="Add price from to like this: $1.50 - $2.00" wire:model="description">
                                             @error('description')<span class="text-danger">{{$message}}</span> @enderror
                                         </div>
                                     </div>

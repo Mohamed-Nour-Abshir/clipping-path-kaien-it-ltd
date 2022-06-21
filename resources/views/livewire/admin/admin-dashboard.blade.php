@@ -22,28 +22,41 @@
                     <div class="row no-gutters align-items-center">
                         <div class="col-md-12 mr-2">
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                All Latest Contacts are here</div>
+                                All Latest Orders</div>
                             <div class="mb-0 text-dark">
-                                <table class="table table-bordered text-dark">
+                                <table class="table table-bordered table-responsive">
                                     <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Email</th>
-                                            <th>Subject</th>
-                                            <th>Message</th>
+                                            <th>Customer Name</th>
+                                            <th style="width: 30px !important;">Customer Email</th>
+                                            <th>Customer Country</th>
+                                            <th>Phone Number</th>
+                                            <th>Service Name</th>
+                                            <th>No. of Images</th>
+                                            <th>Need Images resized</th>
+                                            <th>Customer's Instructions</th>
+                                            <th class="w-50">Images</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($contacts as $contact)
+                                        @foreach ($orders as $order)
                                             <tr>
-                                                <td>{{$contact->name}}</td>
-                                                <td>{{$contact->email}}</td>
-                                                <td>{{$contact->subject}}</td>
-                                                <td>{{$contact->message}}</td>
+                                                <td>{{$order->firstname}} {{$order->lastname}}</td>
+                                                <td class="w-10 text-danger">{{$order->email}}</td>
+                                                <td>{{$order->country}}</td>
+                                                <td class="text-danger">{{$order->phone}}</td>
+                                                <td>{{$order->servicetype}}</td>
+                                                <td>{{$order->imagesno}}</td>
+                                                <td>{{$order->needresized}}</td>
+                                                <td>{{$order->instruction}}</td>
+                                                <td>
+                                                    <a href="{{route('admin.download',['id'=>$order->id])}}" class="btn btn-primary" wire:click.prevent="download({{$order->id}})">Download Images</a>
+                                                </td>
                                             </tr>
                                         @endforeach
                                     </tbody>
-                                </table>
+                                    </table>
+                                    {{$orders->links()}}
                             </div>
                         </div>
 
@@ -80,7 +93,6 @@
                                         @endforeach
                                     </tbody>
                                 </table>
-                                {{$services->links()}}
                             </div>
                         </div>
 

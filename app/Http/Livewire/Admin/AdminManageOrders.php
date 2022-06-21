@@ -2,11 +2,17 @@
 
 namespace App\Http\Livewire\Admin;
 
-use App\Models\BuyService;
 use Livewire\Component;
+use App\Models\BuyService;
+use Illuminate\Support\Facades\Storage;
 
 class AdminManageOrders extends Component
 {
+    public function download($id){
+        $download = BuyService::find($id);
+        $pathToFile = public_path('assets/images/BuyServices/' . $download->images);
+        return response()->download($pathToFile, $download->images);
+    }
     public function render()
     {
         $orders = BuyService::OrderBy('created_at','DESC')->paginate(10);

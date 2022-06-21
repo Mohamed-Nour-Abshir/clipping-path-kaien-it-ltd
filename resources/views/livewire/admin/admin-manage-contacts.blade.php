@@ -24,7 +24,7 @@
                         @if (Session::has('message'))
                            <div class="alert alert-success" role="alert">{{Session::get('message')}}</div>
                         @endif
-                        <table class="table table-bordered">
+                        <table class="table table-bordered table-responsive">
                             <thead>
                                 <tr>
                                     <th>Name</th>

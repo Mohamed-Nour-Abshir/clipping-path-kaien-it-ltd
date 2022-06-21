@@ -116,23 +116,6 @@
             </li>
             <hr class="sidebar-divider d-none d-md-block">
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pricing"
-                    aria-expanded="true" aria-controls="pricing">
-                    <i class="fa-solid fa-dollar"></i>
-                    <span>Manage Pricings</span>
-                </a>
-                <div id="pricing" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Manage Pricings:</h6>
-                        <a class="collapse-item" href="{{route('admin.managepricing')}}">All Pricings</a>
-                        <a class="collapse-item" href="{{route('admin.addpricing')}}">Add Pricing</a>
-                        <a class="collapse-item" href="{{route('edit.pricing')}}">Edit Pricing</a>
-                        <a class="collapse-item" href="{{route('admin.deletepricing')}}">Delete Pricing</a>
-                    </div>
-                </div>
-            </li>
-            <hr class="sidebar-divider d-none d-md-block">
-            <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#news"
                     aria-expanded="true" aria-controls="news">
                     <i class="fa-solid fa-newspaper"></i>
@@ -171,8 +154,7 @@
 
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-                    <a href="/" class="btn btn-primary"><i class="fa-solid fa-arrow-left"></i> Back To Website</a>
+                    <a href="/" class="btn btn-primary col-md-2 btn-mobile"><i class="fa-solid fa-arrow-left"></i> Back To Website</a>
 
                     <p class="text-primary h5" style="margin-left: 300px;">Welcome {{Auth::user()->name}} !!!! <i class="fas fa-laugh-wink text-warning"></i></p>
                     <!-- Sidebar Toggle (Topbar) -->

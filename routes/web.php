@@ -2,51 +2,33 @@
 
 use App\Http\Livewire\AboutComponent;
 use App\Http\Livewire\Admin\AdminAddBestServices;
-use App\Http\Livewire\Admin\AdminAddCourse;
 use App\Http\Livewire\Admin\AdminAddNews;
-use App\Http\Livewire\Admin\AdminAddPricing;
 use App\Http\Livewire\Admin\AdminAddServices;
-use App\Http\Livewire\Admin\AdminAddTeamMember;
-use App\Http\Livewire\Admin\AdminAddUser;
 use App\Http\Livewire\Admin\AdminDashboard;
 use App\Http\Livewire\Admin\AdminEditBestServices;
-use App\Http\Livewire\Admin\AdminEditCourses;
 use App\Http\Livewire\Admin\AdminEditNews;
-use App\Http\Livewire\Admin\AdminEditPricing;
 use App\Http\Livewire\Admin\AdminEditServices;
-use App\Http\Livewire\Admin\AdminEditTeamMember;
 use App\Http\Livewire\Admin\AdminEditUser;
 use App\Http\Livewire\Admin\AdminManageBestServices;
 use App\Http\Livewire\Admin\AdminManageContacts;
-use App\Http\Livewire\Admin\AdminManageCourses;
 use App\Http\Livewire\Admin\AdminManageNews;
 use App\Http\Livewire\Admin\AdminManageOrders;
-use App\Http\Livewire\Admin\AdminManagePricing;
 use App\Http\Livewire\Admin\AdminManageServices;
-use App\Http\Livewire\Admin\AdminManageTeam;
 use App\Http\Livewire\Admin\AdminManageUsers;
 use App\Http\Livewire\Admin\DeleteBestServiceComponent;
-use App\Http\Livewire\Admin\DeleteCoursesComponent;
 use App\Http\Livewire\Admin\DeleteNewsComponent;
-use App\Http\Livewire\Admin\DeletePricingComponent;
 use App\Http\Livewire\Admin\DeleteServicesComponent;
-use App\Http\Livewire\Admin\DeleteTeamComponent;
 use App\Http\Livewire\Admin\DeleteUsersComponent;
 use App\Http\Livewire\Admin\EditBestServiceComponent;
-use App\Http\Livewire\Admin\EditCoursesComponent;
 use App\Http\Livewire\Admin\EditNewsComponent;
-use App\Http\Livewire\Admin\EditPricingComponent;
 use App\Http\Livewire\Admin\EditServicesComponent;
-use App\Http\Livewire\Admin\EditTeamComponent;
 use App\Http\Livewire\Admin\EditUsersComponent;
 use App\Http\Livewire\BackgroundRemoval;
 use App\Http\Livewire\BannerDesign;
-use App\Http\Livewire\BuyOurService;
 use App\Http\Livewire\BuyServicesComponent;
 use App\Http\Livewire\ClippingPath;
 use App\Http\Livewire\ColorCorrection;
 use App\Http\Livewire\ContactComponent;
-use App\Http\Livewire\CoursesComponent;
 use App\Http\Livewire\DegitalMarketing;
 use App\Http\Livewire\EcommercePhoto;
 use App\Http\Livewire\GraphicDesignService;
@@ -57,8 +39,6 @@ use App\Http\Livewire\PhotoEditingService;
 use App\Http\Livewire\PhotoRoutching;
 use App\Http\Livewire\Portofolio;
 use App\Http\Livewire\PricingComponent;
-use App\Http\Livewire\ServiceseComponent;
-use App\Http\Livewire\TeamComponent;
 use App\Http\Livewire\User\UserDashboard;
 use Illuminate\Support\Facades\Route;
 
@@ -112,7 +92,6 @@ Route::get('/degital-marketing',DegitalMarketing::class);
 Route::middleware(['auth:sanctum','verified','authadmin'])->group(function(){
     // All admin routes will be here
     Route::get('/admin/dashboard',AdminDashboard::class)->name('admin.dashboard');
-
     //services
     Route::get('/admin/services/manageservices',AdminManageServices::class)->name('admin.manageservices');
     Route::get('/admin/services/addservices',AdminAddServices::class)->name('admin.addservices');
@@ -144,19 +123,12 @@ Route::middleware(['auth:sanctum','verified','authadmin'])->group(function(){
     Route::get('/admin/users/EditUsers',EditUsersComponent::class)->name('editusers');
     Route::get('/admin/users/DeleteUsers',DeleteUsersComponent::class)->name('deleteusers');
 
-    //Pricings
-    Route::get('/admin/pricing/manageprices',AdminManagePricing::class)->name('admin.managepricing');
-    Route::get('/admin/pricing/adminaddpricing',AdminAddPricing::class)->name('admin.addpricing');
-    Route::get('/admin/pricing/admineditpricing/{pricing_id}',AdminEditPricing::class)->name('admin.editpricing');
-
-    Route::get('/admin/pricing/EditPricing',EditPricingComponent::class)->name('edit.pricing');
-    Route::get('/admin/pricing/DletePricing',DeletePricingComponent::class)->name('admin.deletepricing');
-
     //contacts
     Route::get('/admin/contacts/adminmanagecontacts',AdminManageContacts::class)->name('admin.managecontacts');
 
     //orders
     Route::get('/admin/orders/manageorders',AdminManageOrders::class)->name('admin.manageorders');
+    Route::get('/admin/download-order-images/{id}',AdminManageOrders::class)->name('admin.download');
 });
 
 

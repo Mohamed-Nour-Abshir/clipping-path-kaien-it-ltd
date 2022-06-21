@@ -27,7 +27,7 @@
       <!-- nvabar for mobiles  -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
         <div class="container-fluid">
-          <img src="{{asset('assets/images/kaizen-logo.png')}}" alt="logo" style="text-align: center; height: 50px;">
+          <a href="/"><img src="{{asset('assets/images/kaizen-logo.png')}}" alt="logo" style="text-align: center; height: 50px;"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fa-solid fa-align-justify"></i>
           </button>
@@ -130,7 +130,7 @@
 
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                     <li>
-                                        <a class="" href="{{route('profile.show')}}"> <i class="fas fa-user fa-sm fa-fw mr-2"></i> Profile</a>
+                                        <a class="dropdown-item" href="{{route('profile.show')}}"> <i class="fas fa-user fa-sm fa-fw mr-2"></i> Profile</a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2"></i> Logout</a>
@@ -370,7 +370,7 @@
               </div>
             </div>
             <hr style="height: 1px; background:grey;">
-            <p class="text-center text-light" style="font-size: 20px;">&copy; 2022 All Right Reserved by <a href="#" class="text-primary"> Kaizen It LTD. </a></p>
+            <p class="text-center text-light" style="font-size: 20px;">&copy; 2022 All Right Reserved by <a href="/" class="text-primary"> Kaizen It LTD. </a></p>
             <p class="text-center text-light" style="font-size: 20px;">Company Registration: 13897274. To verify please <a href="#" class="text-primary"> Click here. </a></p>
             <div class="template-demo text-center">
               <button type="button" class="btn btn-social-icon btn-rounded"><i class="fa-brands fa-facebook"></i></button>

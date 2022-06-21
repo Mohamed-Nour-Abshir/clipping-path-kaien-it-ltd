@@ -2,13 +2,12 @@
 
 namespace App\Http\Livewire;
 
-use App\Mail\OrderConfirmation;
 use Livewire\Component;
 use App\Models\BuyService;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Carbon;
+use App\Mail\OrderConfirmation;
 use Illuminate\Support\Facades\Mail;
-
 class BuyServicesComponent extends Component
 {
     use WithFileUploads;
@@ -33,7 +32,7 @@ class BuyServicesComponent extends Component
             'servicetype' => 'required',
             'imagesno' => 'required',
             'needresized' => 'required',
-            'images' => 'required|image',
+            'images' => 'required|file:zip',
             'instruction' => 'required'
         ]);
     }
@@ -47,7 +46,7 @@ class BuyServicesComponent extends Component
             'servicetype' => 'required',
             'imagesno' => 'required',
             'needresized' => 'required',
-            'images' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
+            'images' => 'required|file',
             'instruction' => 'required'
         ]);
         $buyservice = new BuyService();
@@ -60,15 +59,21 @@ class BuyServicesComponent extends Component
         $buyservice->imagesno = $this->imagesno;
         $buyservice->needresized = $this->needresized;
         $buyservice->instruction = $this->instruction;
+
         if($this->images){
-            $imagesname = '';
-            foreach($this->images as $key=>$image){
-                $imgName = Carbon::now()->timestamp.$key.'.'.$image->extension();
-                $image->storeAs('BuyServices',$imgName);
-                $imagesname = $imagesname . ',' .$imgName;
-            }
-            $buyservice->images = $imagesname;
+            $imageName = Carbon::now()->timestamp.'.'.$this->images->extension();
+            $this->images->storeAs('BuyServices', $imageName);
+            $buyservice->images = $imageName;
         }
+        // if($this->images){
+        //     $imagesname = '';
+        //     foreach($this->images as $key=>$image){
+        //         $imgName = Carbon::now()->timestamp.$key.'.'.$image->extension();
+        //         $image->storeAs('BuyServices',$imgName);
+        //         $imagesname = $imagesname. ','  .$imgName;
+        //     }
+        //     $buyservice->images = $imagesname;
+        // }
         $buyservice->save();
         session()->flash('message','Thanks for your order we get your order and we will reply you soon');
     }

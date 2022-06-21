@@ -288,7 +288,8 @@
                         <div class="col-md-6">
                             <label for="" class="mb-1 text-primary">Service Type <span class="text-danger">*</span></label>
                             <select name="" id="" class="form-control form-select" wire:model="servicetype">
-                                <option selected value="Clipping Path Service">Clipping Path Service</option>
+                                <option selected>Select Service</option>
+                                <option value="Clipping Path Service">Clipping Path Service</option>
                                 <option value="Car Photo Editing">Car Photo Editing</option>
                                 <option value="Multi Clipping Path Service">Multi Clipping Path Service</option>
                                 <option value="Color Correction Service">Color Correction Service</option>
@@ -309,6 +310,7 @@
                           <div class="col-md-6">
                             <label for="" class="mb-1 text-primary">How Many Images? <span class="text-danger">*</span></label>
                             <select name="" id="" class="form-control form-select" wire:model="imagesno">
+                                <option selected>Select How many Images You need</option>
                                 <option selected value="100 Images">100 Images</option>
                                 <option value="100-500 Images">100-500 Images</option>
                                 <option value="500+">500+</option>
@@ -318,6 +320,7 @@
                           <div class="col-md-6">
                             <label for="needresized" class="mb-1 text-primary">Do you need your images resized? (free) <span class="text-danger">*</span></label>
                             <select name="needresized" id="needresized" class="form-control form-select" wire:model="needresized">
+                                <option selected>Select Your Opinion</option>
                                 <option value="No">No</option>
                                 <option value="Yes">Yes</option>
                             </select>
@@ -327,13 +330,9 @@
 
                     <div class="row mb-3">
                         <div class="col-md-6">
-                            <label for="" class="mb-2 text-primary">Upload Your Images <span class="text-danger">*</span></label>
-                            <input type="file" class="form-control" wire:model="images" multiple>
-                                {{-- @if ($images)
-                                    @foreach ($images as $image)
-                                        <img src="{{ $image->temporaryUrl() }}" width="120">
-                                    @endforeach
-                                @endif --}}
+                            <label for="" class="mb-2 text-primary">Upload Your Images <span class="text-danger">*</span></label><br>
+                            <span class="text-success">Please make your images zip file and then upload your zip file here</span>
+                            <input type="file" class="form-control" wire:model="images">
                                 @error('images')<span class="text-danger">{{$message}}</span> @enderror
                                 <div wire:loading wire:target="images">Uploading...</div>
                         </div>

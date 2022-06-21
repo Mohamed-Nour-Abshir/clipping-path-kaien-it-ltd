@@ -19,19 +19,19 @@
                     <h4>Buy Our Services</h4>
                     <div class="row">
                         <div class="col-md-4 text-center text-primary">
-                            <img src="assets/images/portofolio/photo-8.webp" class="mb-3" alt="" width="200" height="200">
+                            <img src="assets/images/portofolio/photo-8.webp" class="mb-3" alt="" width="200" height="200"><br>
                             <a href="/photo-routching-service" style="font-size: 20px;" class="mt-5">Photo Retouching </a>
                             <p>$0.30 – $1.50 Per image</p>
                             <a href="/buy-our-services" class="btn btn-primary form-control text-light mb-3">Buy Now</a>
                         </div>
                         <div class="col-md-4 text-center text-primary">
-                            <img src="assets/images/services/bag.webp" class="mb-3" alt="" width="200" height="200">
+                            <img src="assets/images/services/bag.webp" class="mb-3" alt="" width="200" height="200"><br>
                             <a href="/clipping-path-service" style="font-size: 20px;" class="mt-5">Clipping Path Services</a>
                             <p>$0.40 – $9.00 Per image</p>
                             <a href="/buy-our-services" class="btn btn-primary form-control text-light mb-3">Buy Now</a>
                         </div>
                         <div class="col-md-4 text-center text-primary">
-                            <img src="assets/images/portofolio/clipping-4-full.webp" class="mb-3" alt="" width="200" height="200">
+                            <img src="assets/images/portofolio/clipping-4-full.webp" class="mb-3" alt="" width="200" height="200"><br>
                             <a href="/background-removal-service" style="font-size: 20px;" class="mt-5">Photo Background Removal</a>
                             <p>$0.40 – $9.00 Per image</p>
                             <a href="/buy-our-services" class="btn btn-primary form-control text-light mb-3">Buy Now</a>

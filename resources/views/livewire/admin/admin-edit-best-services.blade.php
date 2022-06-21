@@ -30,9 +30,9 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-md-6 control-label">Description</label>
+                                        <label class="col-md-6 control-label">Price</label>
                                         <div class="col-md-6 mb-3">
-                                            <input type="text" class="form-control input-md" placeholder="Description of the Service" wire:model="description">
+                                            <input type="text" class="form-control input-md" placeholder="Add price from to like this: $1.50 - $2.00" wire:model="description">
                                             @error('description')<span class="text-danger">{{$message}}</span> @enderror
                                         </div>
                                     </div>

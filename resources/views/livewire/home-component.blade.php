@@ -105,7 +105,7 @@
         @foreach ($services as $service)
             <div class="col-md-3 mb-5">
                 <img src="{{asset('assets/images/Service_Images')}}/{{$service->service_image}}" alt="Services" class="rounded-circle" style="width: 200px;"><br>
-                <a href="/services" class="text-primary text-center">{{$service->service_name}}</a>
+                <a href="" class="text-primary text-center">{{$service->service_name}}</a>
                 <p class="text-center">{{$service->service_content}}</p>
             </div>
         @endforeach
@@ -421,9 +421,8 @@
                                     <div class="carousel-image">
                                         <img class="img-fluid" alt="100%x280" src="{{asset('assets/images/BestServices')}}/{{$bestService->image}}" alt="Best Services">
                                         <div class="">
-                                            <a href="" class="carousel-a text-primary">{{$bestService->name}}</a>
-                                            <p class="carousel-p text-primary">{{$bestService->description}}</p>
-                                            <p class="text-primary">$0.85-$4.25 per image</p>
+                                            <p class="carousel-a text-primary text-center mb-0" style="font-weight: bold;">{{$bestService->name}}</p>
+                                            <p class="carousel-p text-primary text-center" style="font-weight: bold;">{{$bestService->description}} per image</p>
                                         </div>
                                     </div>
                                 </div>

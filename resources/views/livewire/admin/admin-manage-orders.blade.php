@@ -1,4 +1,3 @@
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <div id="scroll-top">
     <div class="container mb-3 mt-2">
         <style>
@@ -54,14 +53,7 @@
                                         <td>{{$order->needresized}}</td>
                                         <td>{{$order->instruction}}</td>
                                         <td>
-                                            @php
-                                              $images = explode(",",$order->images);
-                                            @endphp
-                                            @foreach ($images as $image)
-                                                @if ($image)
-                                                    <img src="{{asset('assets/images/BuyServices')}}/{{$image}}" alt="Orders" width="60"><br>
-                                                @endif
-                                            @endforeach
+                                            <a href="{{route('admin.download',['id'=>$order->id])}}" class="btn btn-primary" wire:click.prevent="download({{$order->id}})">Download Images</a>
                                         </td>
                                     </tr>
                                 @endforeach

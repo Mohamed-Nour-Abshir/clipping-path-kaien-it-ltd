@@ -2,9 +2,9 @@
     <section id="about-us">
         <div class="container">
             <div class="jumbotron">
-                <h2 class="about-content"> KAIZEN IT LTD.  </h2>
-                <h3 class="about-content-h">Outsource Web & App Development in World-wide.</h3>
-                <p class="about-content-p">Get High Quality Education and High Quality Services</p>
+                <h2 class="about-content">Clipping Path  KAIZEN IT LTD.  </h2>
+                <h3 class="about-content-h">Outsource Photo Editing Supplier in World-wide.</h3>
+                <p class="about-content-p">Get high quality photo editing services at low cost with faster delivery.</p>
             </div>
                 <h2 class="about-us-head text-dark mt-1"> About Us </h2>
                 <div class="row courses mb-5">
