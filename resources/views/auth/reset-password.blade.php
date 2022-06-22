@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+            <img src="{{asset('assets/images/kaizen-logo.png')}}" alt="" style="border-radius:50%;width:100px;height:100px;">
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />

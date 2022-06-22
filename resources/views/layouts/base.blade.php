@@ -371,14 +371,13 @@
             </div>
             <hr style="height: 1px; background:grey;">
             <p class="text-center text-light" style="font-size: 20px;">&copy; 2022 All Right Reserved by <a href="/" class="text-primary"> Kaizen It LTD. </a></p>
-            <p class="text-center text-light" style="font-size: 20px;">Company Registration: 13897274. To verify please <a href="#" class="text-primary"> Click here. </a></p>
             <div class="template-demo text-center">
-              <button type="button" class="btn btn-social-icon btn-rounded"><i class="fa-brands fa-facebook"></i></button>
-              <button type="button" class="btn btn-social-icon btn-rounded"><i class="fa-brands fa-youtube"></i></button>
-              <button type="button" class="btn btn-social-icon btn-rounded"><i class="fa-brands fa-twitter"></i></button>
-              <button type="button" class="btn btn-social-icon btn-rounded"><i class="fa-brands fa-dribbble"></i></button>
-              <button type="button" class="btn btn-social-icon btn-rounded"><i class="fa-brands fa-linkedin"></i></button>
-              <button type="button" class="btn btn-social-icon btn-rounded"><i class="fa-brands fa-instagram"></i></button>
+              <a href="" type="button" class="btn btn-social-icon btn-rounded"><i class="fa-brands fa-facebook"></i></a>
+              <a href="" type="button" class="btn btn-social-icon btn-rounded"><i class="fa-brands fa-youtube"></i></a>
+              <a href="" type="button" class="btn btn-social-icon btn-rounded"><i class="fa-brands fa-twitter"></i></a>
+              <a href="" type="button" class="btn btn-social-icon btn-rounded"><i class="fa-brands fa-dribbble"></i></a>
+              <a href="" type="button" class="btn btn-social-icon btn-rounded"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="" type="button" class="btn btn-social-icon btn-rounded"><i class="fa-brands fa-instagram"></i></a>
             </div>
             <a href="#scroll-top" class="position-fixed bottom-0 end-0 text-warning p-5 scroll">
               <i class="fa-solid fa-chevron-up"></i>

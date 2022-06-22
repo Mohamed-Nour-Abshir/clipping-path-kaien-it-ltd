@@ -78,7 +78,7 @@
             </div>
             <p class="text-primary text-center">Pay our invoice</p>
             <p>Once you agreed with our price and delivery time, our term will send you an
-            invoice to pay us or You can purchase our services through our website.</p>
+            invoice to pay us.</p>
         </div>
         <div class="col-md-3">
             <div class="image-icon3 position-relative">
@@ -106,7 +106,7 @@
             <div class="col-md-3 mb-5">
                 <img src="{{asset('assets/images/Service_Images')}}/{{$service->service_image}}" alt="Services" class="rounded-circle" style="width: 200px;"><br>
                 <a href="" class="text-primary text-center">{{$service->service_name}}</a>
-                <p class="text-center">{{$service->service_content}}</p>
+                <p class="text-right" style="margin-left: 20px;">{{$service->service_content}}</p>
             </div>
         @endforeach
         </div>
@@ -145,7 +145,7 @@
                 we are not satisfied until you are. So take action now and get these
                 amazing services at very affordable prices, we help you save your money.
             </p>
-            <p>Thanks by, Rakhibul Hasan (CEO).</p>
+            <p>Thanks by, M A Momin Cse (CEO).</p>
 
             <div class="row mt-5">
             <div class="col-md-4">
@@ -377,7 +377,7 @@
             suppliers when it comes to image editing in your business; they
             offer faster, reliable, and beneficial services.
             You now have the valuable benefits you will get from hiring
-            <b> Clipping Path Creative LTD</b>. They will never disappoint.
+            <b> Clipping Path Kaizen It LTD</b>. They will never disappoint.
             </p>
             <div class="get-free-trail-btn">
                 <a href="/buy-our-services" class="btn btn-primary text-light"><i class="fa-solid fa-share"></i> Free Trail 2 Images</a>

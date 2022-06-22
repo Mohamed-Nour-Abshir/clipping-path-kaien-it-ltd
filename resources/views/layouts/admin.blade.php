@@ -69,7 +69,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#buyservices"
                     aria-expanded="true" aria-controls="buyservices">
-                    <i class="fa-solid fa-buyservices"></i>
+                    <i class="fa-brands fa-first-order"></i>
                     <span>Manage Orders</span>
                 </a>
                 <div id="buyservices" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
