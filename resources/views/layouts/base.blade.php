@@ -182,7 +182,7 @@
                         <li class="service-li">
                             <a href="/banner-design-service"><i class="fa-solid fa-panorama"></i> Banner Design</a>
                         </li>
-                        <li>
+                        <li class="service-li">
                             <a href="/background-removal-service"><i class="fa-solid fa-images"></i> Background Removal Service</a>
                         </li>
                     </ul>
